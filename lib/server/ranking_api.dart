@@ -1,13 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 import 'package:webtoon_explorer_app/models/anime.dart';
 import "package:http/http.dart" as http;
 
 Future<Iterable<Anime>> getAnimeByRankingTypeApi({
-  required String rankingType,
-  required int limit,
+  String? rankingType,
+  int? limit,
 }) async {
   final Url =
       'https://api.myanimelist.net/v2/anime/ranking?ranking_type=$rankingType&limit=$limit';

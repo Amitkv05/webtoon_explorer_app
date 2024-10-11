@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webtoon_explorer_app/screens/favorite_screen.dart';
 import 'package:webtoon_explorer_app/screens/home_screen.dart';
 
 class NavBar extends StatefulWidget {
@@ -14,7 +15,7 @@ class _NavBarState extends State<NavBar> {
   List<Widget> pages = [
     const HomeScreen(),
     const HomeScreen(), //categories..
-    const HomeScreen(), // favourite..
+    const FavoriteScreen(), // favourite..
     const HomeScreen(), // settings...
   ];
   @override
@@ -45,7 +46,7 @@ class _NavBarState extends State<NavBar> {
             activeIcon: Icon(
               Icons.home,
               size: myHeight * 0.03,
-              color: const Color(0xffFBC700),
+              color: const Color.fromARGB(89, 33, 149, 243),
             ),
           ),
           BottomNavigationBarItem(
@@ -57,7 +58,7 @@ class _NavBarState extends State<NavBar> {
             activeIcon: Icon(
               Icons.category_rounded,
               size: myHeight * 0.03,
-              color: const Color(0xffFBC700),
+              color: const Color.fromARGB(89, 33, 149, 243),
             ),
           ),
           BottomNavigationBarItem(
@@ -69,7 +70,7 @@ class _NavBarState extends State<NavBar> {
             activeIcon: Icon(
               Icons.favorite,
               size: myHeight * 0.03,
-              color: const Color(0xffFBC700),
+              color: const Color.fromARGB(89, 33, 149, 243),
             ),
           ),
           BottomNavigationBarItem(
@@ -81,7 +82,7 @@ class _NavBarState extends State<NavBar> {
             activeIcon: Icon(
               Icons.settings,
               size: myHeight * 0.03,
-              color: const Color(0xffFBC700),
+              color: const Color.fromARGB(89, 33, 149, 243),
             ),
           ),
         ],

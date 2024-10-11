@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<RankingProvider>(
-            create: (context) => RankingProvider("all", 8))
+            create: (context) => RankingProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -27,9 +27,6 @@ class MainApp extends StatelessWidget {
           ),
           elevatedButtonTheme: const ElevatedButtonThemeData(
             style: ButtonStyle(
-              // textStyle: WidgetStatePropertyAll(
-              //   TextStyle(color: Colors.black),
-              // ),
               backgroundColor: WidgetStatePropertyAll(
                 GlobalVariables.secondaryColor,
               ),
